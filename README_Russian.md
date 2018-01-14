@@ -34,13 +34,11 @@
 - Открываем с помощью Notepad++ файл "raspi-storage-install.sh" и если вы собираетесь использовать синхронизацию с NAS (PC), то находим 86 (89 - для Windows) строку (после ## NAS - mount") и заменяем NAS_IP_Adresse/RaspiFolder на IP вашего сервера и путь к папке для синхронизации. Также заменяем UsErNaMe и UsErPaSsWoRd на ваш логин и пароль соответственно. Так же убираем решетки у 110 ("#read -rn1 -p "Press any key when ready" ; echo") и 111 ("#sudo raspi-config") строк.
 
 
-После записи образа Raspbian на SD карту, копируем все 5 файлов диск "Boot".
+После записи образа Raspbian на SD карту, копируем все 5 файлов на диск "Boot".
 Вставлем карту в Raspberry Pi и включаем. Ждем пару минут, пока Raspberry Pi не настроится и не подключится к вашей сети (интернет необходим для установки).
-Затем соединяемся с Raspberry Pi с помощью PuTTY: Host - Raspberrypi; Port - 22.
-Login: pi
-Password: raspberry
+Затем соединяемся с Raspberry Pi с помощью PuTTY: Host - Raspberrypi; Port - 22. Login: pi; Password: raspberry
 
-Затем вводим команду: bash /boot/raspi-storage-install.sh
+Для установки Raspi-Storage вводим команду: bash /boot/raspi-storage-install.sh
 
 # Работа с Raspi-Storage:
 
